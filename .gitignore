@@ -1,0 +1,4 @@
+bazel-bin
+bazel-model-verifier-in-kotlin
+bazel-out
+bazel-testlogs
