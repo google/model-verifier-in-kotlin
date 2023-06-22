@@ -17,6 +17,7 @@ load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library", "kt_jvm_test")
 kt_jvm_library(
     name = "lib",
     srcs = [
+        "DatabaseTable.kt",
         "Lists.kt",
         "Sets.kt",
     ],
@@ -28,6 +29,17 @@ kt_jvm_test(
     name = "SetsTest",
     srcs = ["SetsTest.kt"],
     test_class = "com.github.zmatti.mvik.lib.SetsTest",
+    deps = [
+        ":lib",
+        "@maven//:junit_junit",
+        "@maven//:com_google_truth_truth",
+    ]
+)
+
+kt_jvm_test(
+    name = "DatabaseTableTest",
+    srcs = ["DatabaseTableTest.kt"],
+    test_class = "com.github.zmatti.mvik.lib.DatabaseTableTest",
     deps = [
         ":lib",
         "@maven//:junit_junit",
