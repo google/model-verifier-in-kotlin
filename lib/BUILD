@@ -26,6 +26,17 @@ kt_jvm_library(
 )
 
 kt_jvm_test(
+    name = "ListsTest",
+    srcs = ["ListsTest.kt"],
+    test_class = "com.github.zmatti.mvik.lib.ListsTest",
+    deps = [
+        ":lib",
+        "@maven//:junit_junit",
+        "@maven//:com_google_truth_truth",
+    ]
+)
+
+kt_jvm_test(
     name = "SetsTest",
     srcs = ["SetsTest.kt"],
     test_class = "com.github.zmatti.mvik.lib.SetsTest",
