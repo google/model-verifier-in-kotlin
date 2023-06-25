@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.diehard
+package com.google.mvik.examples.diehard
 
-import com.github.zmatti.mvik.framework.Init
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Safety
-import com.github.zmatti.mvik.framework.Step
+import com.google.mvik.framework.Init
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Safety
+import com.google.mvik.framework.Step
 
 data class DieHardState(val jug5: Int, val jug3: Int) {}
 

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.readerswriters
+package com.google.mvik.examples.readerswriters
 
-import com.github.zmatti.mvik.framework.Init
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Safety
-import com.github.zmatti.mvik.framework.Step
-import com.github.zmatti.mvik.lang.collecting
-import com.github.zmatti.mvik.lib.head
-import com.github.zmatti.mvik.lib.isSubsetOf
-import com.github.zmatti.mvik.lib.tail
+import com.google.mvik.framework.Init
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Safety
+import com.google.mvik.framework.Step
+import com.google.mvik.lang.collecting
+import com.google.mvik.lib.head
+import com.google.mvik.lib.isSubsetOf
+import com.google.mvik.lib.tail
 
 object ReadersWritersConstants {
   val ACTORS = setOf(1, 2, 3, 4)

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.mu
+package com.google.mvik.examples.mu
 
-import com.github.zmatti.mvik.framework.Boundary
-import com.github.zmatti.mvik.framework.Init
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Safety
-import com.github.zmatti.mvik.framework.Step
-import com.github.zmatti.mvik.lang.collecting
+import com.google.mvik.framework.Boundary
+import com.google.mvik.framework.Init
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Safety
+import com.google.mvik.framework.Step
+import com.google.mvik.lang.collecting
 
 data class MuState(val d: String) {
 

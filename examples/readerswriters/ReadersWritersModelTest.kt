@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.readerswriters
+package com.google.mvik.examples.readerswriters
 
-import com.github.zmatti.mvik.testing.assertThat
+import com.google.mvik.testing.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4

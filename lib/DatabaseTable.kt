@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.lib
+package com.google.mvik.lib
 
 data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
   fun insert(newKey: K, newValue: V) : DatabaseTable<K,V> {

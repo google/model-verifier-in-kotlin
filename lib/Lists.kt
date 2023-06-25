@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.lib
+package com.google.mvik.lib
 
 val <T> List<T>.tail: List<T>
   get() = drop(1)

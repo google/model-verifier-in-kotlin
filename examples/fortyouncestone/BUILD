@@ -29,7 +29,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "FortyOunceStoneModelTest",
     srcs = ["FortyOunceStoneModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.fortyouncestone.FortyOunceStoneModelTest",
+    test_class = "com.google.mvik.examples.fortyouncestone.FortyOunceStoneModelTest",
     deps = [
         ":forty_ounce_stone_model_lib",
         "//testing",

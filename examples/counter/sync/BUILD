@@ -30,7 +30,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "CounterModelTest",
     srcs = ["CounterModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.counter.sync.CounterModelTest",
+    test_class = "com.google.mvik.examples.counter.sync.CounterModelTest",
     deps = [
         ":counter_model_lib",
         "//testing",

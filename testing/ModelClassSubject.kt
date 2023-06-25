@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.testing
+package com.google.mvik.testing
 
 import com.google.common.truth.Truth
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Result
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Result
 
 fun <State : Any> assertThat(modelClass: Model<State>): ModelClassSubject<State> {
   return ModelClassSubject(modelClass)

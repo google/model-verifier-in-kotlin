@@ -28,7 +28,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "DieHardModelTest",
     srcs = ["DieHardModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.diehard.DieHardModelTest",
+    test_class = "com.google.mvik.examples.diehard.DieHardModelTest",
     deps = [
         ":die_hard_model_lib",
         "//testing",

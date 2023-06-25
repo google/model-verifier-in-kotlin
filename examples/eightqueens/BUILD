@@ -28,7 +28,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "EightQueensModelTest",
     srcs = ["EightQueensModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.eightqueens.EightQueensModelTest",
+    test_class = "com.google.mvik.examples.eightqueens.EightQueensModelTest",
     deps = [
         ":eight_queens_model_lib",
         "//testing",

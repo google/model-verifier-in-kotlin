@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.framework
+package com.google.mvik.framework
 
 data class Result<State>(
   val success: Boolean,

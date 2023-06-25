@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.counter.sync
+package com.google.mvik.examples.counter.sync
 
-import com.github.zmatti.mvik.framework.Init
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Safety
-import com.github.zmatti.mvik.framework.Step
-import com.github.zmatti.mvik.lang.collecting
-import com.github.zmatti.mvik.lib.emptyTable
+import com.google.mvik.framework.Init
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Safety
+import com.google.mvik.framework.Step
+import com.google.mvik.lang.collecting
+import com.google.mvik.lib.emptyTable
 
 object CounterConstants {
   val FOLDERS = setOf(1, 2, 3)

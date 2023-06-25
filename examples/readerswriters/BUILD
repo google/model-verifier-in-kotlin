@@ -29,7 +29,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "ReadersWritersModelTest",
     srcs = ["ReadersWritersModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.readerswriters.ReadersWritersModelTest",
+    test_class = "com.google.mvik.examples.readerswriters.ReadersWritersModelTest",
     deps = [
         ":readers_writers_model_lib",
         "//testing",

@@ -28,7 +28,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "ListsTest",
     srcs = ["ListsTest.kt"],
-    test_class = "com.github.zmatti.mvik.lib.ListsTest",
+    test_class = "com.google.mvik.lib.ListsTest",
     deps = [
         ":lib",
         "@maven//:junit_junit",
@@ -39,7 +39,7 @@ kt_jvm_test(
 kt_jvm_test(
     name = "SetsTest",
     srcs = ["SetsTest.kt"],
-    test_class = "com.github.zmatti.mvik.lib.SetsTest",
+    test_class = "com.google.mvik.lib.SetsTest",
     deps = [
         ":lib",
         "@maven//:junit_junit",
@@ -50,7 +50,7 @@ kt_jvm_test(
 kt_jvm_test(
     name = "DatabaseTableTest",
     srcs = ["DatabaseTableTest.kt"],
-    test_class = "com.github.zmatti.mvik.lib.DatabaseTableTest",
+    test_class = "com.google.mvik.lib.DatabaseTableTest",
     deps = [
         ":lib",
         "@maven//:junit_junit",

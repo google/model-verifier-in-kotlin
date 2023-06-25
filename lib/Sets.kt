@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.lib
+package com.google.mvik.lib
 
 infix fun <T> Set<T>.isSubsetOf(other: Set<T>): Boolean {
   return (this subtract other).isEmpty()

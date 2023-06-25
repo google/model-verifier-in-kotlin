@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.fortyouncestone
+package com.google.mvik.examples.fortyouncestone
 
-import com.github.zmatti.mvik.framework.Init
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Safety
-import com.github.zmatti.mvik.framework.Step
-import com.github.zmatti.mvik.lang.assuming
-import com.github.zmatti.mvik.lang.collecting
-import com.github.zmatti.mvik.lib.subsets
+import com.google.mvik.framework.Init
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Safety
+import com.google.mvik.framework.Step
+import com.google.mvik.lang.assuming
+import com.google.mvik.lang.collecting
+import com.google.mvik.lib.subsets
 
 data class FortyOunceStoneState(val pieces: Set<Int>) {}
 

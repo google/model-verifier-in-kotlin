@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.counter.sync
+package com.google.mvik.examples.counter.sync
 
-import com.github.zmatti.mvik.lib.DatabaseTable
+import com.google.mvik.lib.DatabaseTable
 
 data class ItemsKey(val folder: Int, val item: Int) {}
 

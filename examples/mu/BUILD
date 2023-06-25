@@ -28,7 +28,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "MuModelTest",
     srcs = ["MuModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.mu.MuModelTest",
+    test_class = "com.google.mvik.examples.mu.MuModelTest",
     deps = [
         ":mu_model_lib",
         "//testing",

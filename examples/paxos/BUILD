@@ -30,7 +30,7 @@ kt_jvm_library(
 kt_jvm_test(
     name = "PaxosModelTest",
     srcs = ["PaxosModelTest.kt"],
-    test_class = "com.github.zmatti.mvik.examples.paxos.PaxosModelTest",
+    test_class = "com.google.mvik.examples.paxos.PaxosModelTest",
     deps = [
         ":paxos_model_lib",
         "//testing",

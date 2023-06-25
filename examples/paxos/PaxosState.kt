@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.paxos
+package com.google.mvik.examples.paxos
 
 /** The state corresponding to a single acceptor (participant). */
 data class AcceptorState(

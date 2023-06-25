@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.lang
+package com.google.mvik.lang
 
 /** This file contains structure of the model definition DSL. */
 class Lang {}

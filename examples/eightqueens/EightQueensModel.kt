@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.eightqueens
+package com.google.mvik.examples.eightqueens
 
-import com.github.zmatti.mvik.framework.Init
-import com.github.zmatti.mvik.framework.Model
-import com.github.zmatti.mvik.framework.Safety
-import com.github.zmatti.mvik.framework.Step
-import com.github.zmatti.mvik.lang.collecting
+import com.google.mvik.framework.Init
+import com.google.mvik.framework.Model
+import com.google.mvik.framework.Safety
+import com.google.mvik.framework.Step
+import com.google.mvik.lang.collecting
 
 /*
  * The state is effectively a list, where j at location i means there's a queen at row i, col j.

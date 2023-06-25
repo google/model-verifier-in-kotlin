@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.examples.diehard
+package com.google.mvik.examples.diehard
 
 object Demo {
   @JvmStatic

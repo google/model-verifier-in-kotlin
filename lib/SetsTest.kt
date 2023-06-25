@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.zmatti.mvik.lib
+package com.google.mvik.lib
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
