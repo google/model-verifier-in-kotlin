@@ -34,6 +34,13 @@ data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
   	return DatabaseTable(newData.toMap())
   }
 
+  fun update(key: K, value: V) : DatabaseTable<K,V> {
+    if (!data.contains(key)) {
+      return this
+    }
+    return upsert(key, value)
+  }
+
   fun delete(key: K) : DatabaseTable<K,V> {
   	if (!data.contains(key)) {
   	  return this
