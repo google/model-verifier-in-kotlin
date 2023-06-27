@@ -61,6 +61,12 @@ data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
   	return count
   }
 
+  fun forEachRow(consumer: (K,V) -> Unit) : Unit {
+    for (entry in data.entries.iterator()) {
+      consumer(entry.key, entry.value)
+    }
+  }
+
   val size = data.size
 
   val empty = data.size == 0

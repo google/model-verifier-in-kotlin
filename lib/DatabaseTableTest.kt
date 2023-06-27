@@ -155,4 +155,14 @@ class DatabaseTableTest {
 
     assertThat(table.countIf({k, _ -> k == 1})).isEqualTo(1)
   }
+
+  @Test
+  fun forEachRow() {
+    val table = emptyTable<Int,Int>().insert(1,11).insert(2,12)
+    var captor = mutableMapOf<Int,Int>()
+
+    table.forEachRow({k, v -> captor.put(k,v)})
+
+    assertThat(captor).isEqualTo(mapOf(1 to 11, 2 to 12))
+  }
 }
