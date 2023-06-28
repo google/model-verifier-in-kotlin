@@ -165,4 +165,18 @@ class DatabaseTableTest {
 
     assertThat(captor).isEqualTo(mapOf(1 to 11, 2 to 12))
   }
+
+  @Test
+  fun select_keyAndValueMatch_expectFound() {
+    val table = emptyTable<Int,Int>().insert(1,11).insert(2,12)
+
+    assertThat(table.select({it == 1}, {it == 11})).isEqualTo(listOf(1))
+  }
+
+  @Test
+  fun select_knoMatch_expectNotFound() {
+    val table = emptyTable<Int,Int>().insert(1,11).insert(2,12)
+
+    assertThat(table.select({it == 1}, {it == 12})).isEmpty()
+  }
 }

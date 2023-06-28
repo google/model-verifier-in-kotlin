@@ -67,6 +67,10 @@ data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
     }
   }
 
+  fun select(keyPred: (K) -> Boolean, valuePred: (V) -> Boolean) : List<K> {
+    return data.keys.filter{keyPred(it)}.filter{valuePred(data.get(it)!!)}
+  }
+
   val size = data.size
 
   val empty = data.size == 0
