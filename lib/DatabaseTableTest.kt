@@ -186,4 +186,18 @@ class DatabaseTableTest {
 
     assertThat(table.select({it == 1}, {it == 12})).isEmpty()
   }
+
+  @Test
+  fun tableOf1_expectCorrectSize() {
+    val table = tableOf<Int,Int>(1, 11)
+
+    assertThat(table.size).isEqualTo(1)
+  }
+
+  @Test
+  fun tableOf1_expectCorrectKeys() {
+    val table = tableOf<Int,Int>(1, 11)
+
+    assertThat(table.keys).isEqualTo(setOf(1))
+  }
 }
