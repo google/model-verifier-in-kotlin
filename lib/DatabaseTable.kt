@@ -41,6 +41,18 @@ data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
     return upsert(key, value)
   }
 
+  fun update(keyPred: (K) -> Boolean, valueUpdater: (V) -> V) : DatabaseTable<K,V> {
+    var newData = mutableMapOf<K,V>()
+    for (entry in data.entries.iterator()) {
+      if (keyPred(entry.key)) {
+        newData.put(entry.key, valueUpdater(entry.value))
+      } else {
+        newData.put(entry.key, entry.value)
+      }
+    }
+    return DatabaseTable(newData.toMap())
+  }
+
   fun delete(key: K) : DatabaseTable<K,V> {
   	if (!data.contains(key)) {
   	  return this

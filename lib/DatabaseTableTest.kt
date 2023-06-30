@@ -136,6 +136,13 @@ class DatabaseTableTest {
   }
 
   @Test
+  fun updateUsingLambdas_expectNewValue() {
+    val table = emptyTable<Int,Int>().insert(1,11).update({it == 1},{12})
+
+    assertThat(table.at(1)).isEqualTo(12)
+  }
+
+  @Test
   fun containsKey_expectPositiveResult() {
     val table = emptyTable<Int,Int>().insert(1,11)
 
