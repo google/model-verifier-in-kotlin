@@ -181,7 +181,7 @@ class DatabaseTableTest {
   }
 
   @Test
-  fun select_knoMatch_expectNotFound() {
+  fun select_noMatch_expectNotFound() {
     val table = emptyTable<Int,Int>().insert(1,11).insert(2,12)
 
     assertThat(table.select({it == 1}, {it == 12})).isEmpty()
