@@ -200,4 +200,32 @@ class DatabaseTableTest {
 
     assertThat(table.keys).isEqualTo(setOf(1))
   }
+
+  @Test
+  fun tableOf2_expectCorrectSize() {
+    val table = tableOf<Int,Int>(1, 11, 2, 22)
+
+    assertThat(table.size).isEqualTo(2)
+  }
+
+  @Test
+  fun tableOf2_expectCorrectKeys() {
+    val table = tableOf<Int,Int>(1, 11, 2, 22)
+
+    assertThat(table.keys).isEqualTo(setOf(1, 2))
+  }
+
+  @Test
+  fun tableOf3_expectCorrectSize() {
+    val table = tableOf<Int,Int>(1, 11, 2, 22, 3, 33)
+
+    assertThat(table.size).isEqualTo(3)
+  }
+
+  @Test
+  fun tableOf3_expectCorrectKeys() {
+    val table = tableOf<Int,Int>(1, 11, 2, 22, 3, 33)
+
+    assertThat(table.keys).isEqualTo(setOf(1, 2, 3))
+  }
 }

@@ -97,3 +97,7 @@ data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
 fun <K : Any, V : Any> emptyTable() : DatabaseTable<K,V> { return DatabaseTable<K,V>(mapOf()) }
 
 fun <K : Any, V : Any> tableOf(k: K, v: V) : DatabaseTable<K,V> { return DatabaseTable<K,V>(mapOf(k to v)) }
+
+fun <K : Any, V : Any> tableOf(k1: K, v1: V, k2: K, v2: V) : DatabaseTable<K,V> { return DatabaseTable<K,V>(mapOf(k1 to v1, k2 to v2)) }
+
+fun <K : Any, V : Any> tableOf(k1: K, v1: V, k2: K, v2: V, k3: K, v3: V) : DatabaseTable<K,V> { return DatabaseTable<K,V>(mapOf(k1 to v1, k2 to v2, k3 to v3)) }
