@@ -188,6 +188,20 @@ class DatabaseTableTest {
   }
 
   @Test
+  fun select_keyMatches_expectFound() {
+    val table = emptyTable<Int,Int>().insert(1,11).insert(2,12)
+
+    assertThat(table.select({it == 1})).isEqualTo(listOf(1))
+  }
+
+  @Test
+  fun select_keyDoesntMatch_expectFound() {
+    val table = emptyTable<Int,Int>().insert(1,11).insert(2,12)
+
+    assertThat(table.select({it == 12})).isEmpty()
+  }
+
+  @Test
   fun tableOf1_expectCorrectSize() {
     val table = tableOf<Int,Int>(1, 11)
 
