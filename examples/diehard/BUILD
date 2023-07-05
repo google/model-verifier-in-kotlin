@@ -12,12 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library", "kt_jvm_test")
+load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library", "kt_jvm_test", "kt_jvm_binary")
 
 kt_jvm_library(
     name = "die_hard_model_lib",
     srcs = [
-        "Demo.kt",
         "DieHardModel.kt",
     ],
     deps = [
@@ -35,4 +34,17 @@ kt_jvm_test(
         "@maven//:junit_junit",
         "@maven//:com_google_truth_truth",
         "@maven//:org_jetbrains_kotlin_kotlin_reflect"]
+)
+
+kt_jvm_binary(
+    name = "demo",
+    srcs = [
+        "Demo.kt",
+    ],
+    main_class = "com.google.mvik.examples.diehard.Demo",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":die_hard_model_lib",
+        "@maven//:org_jetbrains_kotlin_kotlin_reflect"
+    ],
 )
