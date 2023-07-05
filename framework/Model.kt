@@ -66,13 +66,13 @@ abstract class Model<State : Any> {
     return Result(true, null, null)
   }
 
-  data class StepSpec<State>(val generator: (State) -> Set<State>, val methodName: String)
+  private data class StepSpec<State>(val generator: (State) -> Set<State>, val methodName: String)
 
   data class SafetySpec<State>(val property: (State) -> Boolean)
 
-  data class StateAndChain<State>(val state: State, val chain: List<Result.ChainElement<State>>)
+  private data class StateAndChain<State>(val state: State, val chain: List<Result.ChainElement<State>>)
 
-  data class BoundarySpec<State>(val property: (State) -> Boolean)
+  private data class BoundarySpec<State>(val property: (State) -> Boolean)
 
   private fun steps(): List<StepSpec<State>> {
     var steps = mutableListOf<StepSpec<State>>()
