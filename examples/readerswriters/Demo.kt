@@ -14,19 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.mvik.framework
+package com.google.mvik.examples.readerswriters
 
-data class Result<State>(
-  val success: Boolean,
-  val stats: Stats,
-  val endState: State?,
-  val chain: List<ChainElement<State>>?
-) {
-  data class ChainElement<State>(val state: State, val methodName: String)
-
-  data class Stats(val numVisitedStates : Int)
+object Demo {
+  @JvmStatic
+  fun main(args: Array<String>) {
+    val result = ReadersWritersModel().solve()
+    println(result)
+  }
 }
-
-fun <State: Any> success(stats: Result.Stats) = Result<State>(true, stats, null, null)
-
-fun <State: Any> failure(stats: Result.Stats, endState: State, chain: List<Result.ChainElement<State>>) = Result<State>(false, stats, endState, chain)
