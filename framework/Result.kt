@@ -23,3 +23,7 @@ data class Result<State>(
 ) {
   data class ChainElement<State>(val state: State, val methodName: String)
 }
+
+fun <State: Any> success() = Result<State>(true, null, null)
+
+fun <State: Any> failure(endState: State, chain: List<Result.ChainElement<State>>) = Result<State>(false, endState, chain)

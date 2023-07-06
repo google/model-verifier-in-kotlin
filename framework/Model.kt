@@ -45,7 +45,7 @@ abstract class Model<State : Any> {
       val currentState = currentStateAndChain.state
 
       if (safetyViolated(currentState, safetyProperties)) {
-        return Result(false, currentState, currentStateAndChain.chain)
+        return failure(currentState, currentStateAndChain.chain)
       }
 
       for (step in steps()) {
@@ -63,7 +63,7 @@ abstract class Model<State : Any> {
       }
     }
 
-    return Result(true, null, null)
+    return success()
   }
 
   private data class StepSpec<State>(val generator: (State) -> Set<State>, val methodName: String)
