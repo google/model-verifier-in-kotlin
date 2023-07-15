@@ -21,6 +21,35 @@ import java.util.Queue
 import kotlin.reflect.KCallable
 import kotlin.reflect.KClass
 
+/**
+ * Base class for models.
+ * 
+ * A model first needs a definition of state as a Kotlin data class. The states are global,
+ * but composition can be used to divide states into states of subsystems when required. The
+ * data class corresponding to the state of the model is the type parameter "State".
+ * 
+ * To implement a model, extend this class, and provide the building block of the model
+ * as annotated methods. Use @Init for defining the mandatory initial state. Use @Step to
+ * define state changes. There can be as many or as few steps as you'd like, but useful
+ * models always contain at least one. Use @Safety to define satefy properties of the model.
+ * These are boolean expressions on states ie. the invariants that should hold regardless
+ * of which state transitions defined in the steps are executed in which. You can define
+ * as many safety properties as you'd like. Models that can be meaningfully verified have
+ * at least one safety property (since otherwise there's nothing to verify).
+ * 
+ * The state space can also be limited in size using @Boundary. Boundaries aren't parts of
+ * the model as such, but a mechanism to keep the state-space size and therefore the 
+ * time-to-verify in check.
+ * 
+ * A model is verified by calling solve(). It can return a success, in which case an 
+ * exhaustive search of the state space starting from the initial state using the defined
+ * steps didn't find a state that breaks any safety property. It can also return a failure,
+ * in which case a state breaking a safety property was found. The results contains in that
+ * case data indicating the sequence of steps leading to the failure. See comments on the
+ * Result class for more details.
+ * 
+ * Models can be unit tested using ModelClassSubject.
+ */
 abstract class Model<State : Any> {
   fun solve(): Result<State> {
     return solve(init(), safeties())
