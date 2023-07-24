@@ -20,6 +20,7 @@ kt_jvm_library(
         "DatabaseTable.kt",
         "Lists.kt",
         "Sets.kt",
+        "SnapshottingDatabaseTable.kt"
     ],
     visibility = ["//visibility:public"],
     deps = [],
@@ -51,6 +52,17 @@ kt_jvm_test(
     name = "DatabaseTableTest",
     srcs = ["DatabaseTableTest.kt"],
     test_class = "com.google.mvik.lib.DatabaseTableTest",
+    deps = [
+        ":lib",
+        "@maven//:junit_junit",
+        "@maven//:com_google_truth_truth",
+    ]
+)
+
+kt_jvm_test(
+    name = "SnapshottingDatabaseTableTest",
+    srcs = ["SnapshottingDatabaseTableTest.kt"],
+    test_class = "com.google.mvik.lib.SnapshottingDatabaseTableTest",
     deps = [
         ":lib",
         "@maven//:junit_junit",
