@@ -91,6 +91,8 @@ data class DatabaseTable <K : Any, V : Any> (val data: Map<K,V>) {
 
   val keys = data.keys
 
+  val values = data.values
+
   fun containsKey(key : K) : Boolean = this.keys.contains(key)
 
   fun at(key : K) : V? = this.data.get(key)

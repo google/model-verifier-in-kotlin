@@ -54,6 +54,13 @@ class DatabaseTableTest {
   }
 
   @Test
+  fun insert_expectCorrectValues() {
+    val table = emptyTable<Int,Int>().insert(KEY1, VALUE1)
+
+    assertThat(table.values).isEqualTo(setOf(VALUE1))
+  }
+
+  @Test
   fun insertTwoRows_expectCorrectSize() {
     val table = emptyTable<Int,Int>().insert(KEY1, VALUE1).insert(KEY2, VALUE2)
 
